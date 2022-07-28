@@ -236,16 +236,19 @@ class Vc_License
 	 */
 	public function checkLicenseKeyFromRemote()
 	{
-		$license_key = vc_request_param('license_key');
+		// TODO: Removed license
+		$response = array('status' => true);
 
-		if (!$this->isValid($license_key)) {
-			$response = array(
-				'status' => false,
-				'error' => esc_html__('Invalid license key', 'js_composer'),
-			);
-		} else {
-			$response = array('status' => true);
-		}
+		// $license_key = vc_request_param('license_key');
+
+		// if (!$this->isValid($license_key)) {
+		// 	$response = array(
+		// 		'status' => false,
+		// 		'error' => esc_html__('Invalid license key', 'js_composer'),
+		// 	);
+		// } else {
+		// 	$response = array('status' => true);
+		// }
 
 		die(wp_json_encode($response));
 	}

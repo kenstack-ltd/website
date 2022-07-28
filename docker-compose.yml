@@ -41,9 +41,9 @@ services:
       WORDPRESS_CONFIG_EXTRA: |
         define('WP_MEMORY_LIMIT', '256M' );
         define('WP_MAX_MEMORY_LIMIT', '512M' );
-        define('WP_UPLOAD_MAX_FILESIZE', '64M');
-        define('WP_POST_MAX_SIZE','64M');
-        define('WP_UPLOAD_MAX_SIZE','64M');
+        define('WP_UPLOAD_MAX_FILESIZE', '256M');
+        define('WP_POST_MAX_SIZE','256M');
+        define('WP_UPLOAD_MAX_SIZE','256M');
     networks:
       kenstack_network:
         ipv4_address: 172.16.0.7
