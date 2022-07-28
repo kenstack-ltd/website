@@ -24,9 +24,9 @@ services:
     image: wordpress:5.8
     volumes:
       - wordpress_data:/usr/src/wordpress
-      - wordpress_plugins:/usr/src/wordpress/wp-content/plugins
       - ./wp-content/themes:/usr/src/wordpress/wp-content/themes
       - ./wp-content/themes:/var/www/html/wp-content/themes
+      - ./wp-content/plugins:/var/www/html/wp-content/plugins
       - ./wp-content/uploads:/var/www/html/wp-content/uploads
       - ./configs/wordpress.ini:/usr/local/etc/php/conf.d/wordpress.ini 
     restart: always
