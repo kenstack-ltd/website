@@ -33,7 +33,7 @@ services:
     env_file:
       - ./.env
     environment:
-      VIRTUAL_HOST: kenstack.io
+      VIRTUAL_HOST: kenstack.io,www.kenstack.io
       WORDPRESS_DB_HOST: $DB_HOST
       WORDPRESS_DB_USER: $DB_USER
       WORDPRESS_DB_PASSWORD: $DB_PASSWORD
